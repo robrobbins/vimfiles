@@ -1,0 +1,1 @@
+" Pythonau BufNewFile,BufRead *.py,*.pyc	set filetype=python
