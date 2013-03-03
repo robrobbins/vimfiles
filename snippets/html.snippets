@@ -138,31 +138,14 @@ snippet span
 	<span ${1}>${2}</span>
 snippet ul
 	<ul ${1}>${2}</ul>
-# Embed QT Movie
-snippet movie
-	<object width="$2" height="$3" classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
-	 codebase="http://www.apple.com/qtactivex/qtplugin.cab">
-		<param name="src" value="$1"`Close()`>
-		<param name="controller" value="$4"`Close()`>
-		<param name="autoplay" value="$5"`Close()`>
-		<embed src="${1:movie.mov}"
-			width="${2:320}" height="${3:240}"
-			controller="${4:true}" autoplay="${5:true}"
-			scale="tofit" cache="true"
-			pluginspage="http://www.apple.com/quicktime/download/"
-		`Close()[1:]`>
-	</object>${6}
 snippet fieldset
 	<fieldset id="$1">
 		<legend>${1:name}</legend>
-
 		${3}
 	</fieldset>
 snippet form
 	<form action="${1:`Filename('$1_submit')`}" method="${2:get}" accept-charset="utf-8">
 		${3}
-
-
 	<p><input type="submit" value="Continue &rarr;"`Close()`></p>
 	</form>
 snippet h1
@@ -198,9 +181,9 @@ snippet table
 	</table>${4}
 snippet textarea
 	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
-snippet mustache
+snippet eval
 	{{ ${1} }}
-snippet mustache=
+snippet interp
 	{{= ${1} }}
-snippet mustache-
+snippet escape
 	{{- ${1} }}

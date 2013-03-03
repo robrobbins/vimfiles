@@ -12,15 +12,17 @@ set scs
 set nocuc
 set noea
 set numberwidth=2
-set guifont=Panic\ Sans:h12
-set background=light
-colorscheme vylight
+set guifont=Consolas:h13
+"set background=light
+colorscheme vilight
 set cmdheight=2
-set list listchars=tab:\ \ ,trail:·
+set list 
+set listchars=tab:▸\ ,trail:◇,extends:»,precedes:«,eol:·
+set cc=80
 "NO TOOLBAR ---------------------------------------------------------------
 set guioptions-=T
 "HIGHLIGHT AFTER 80 COL WIDTH----------------------------------------------
-:let w:m1=matchadd('Comment', '\%>80v.\+', -1)
+":let w:m1=matchadd('Comment', '\%>80v.\+', -1)
 "POPUP/COMPLETION MENUS----------------------------------------------------
 set completeopt=menu,longest,preview
 set wildmenu
@@ -42,13 +44,14 @@ set timeoutlen=250
 set autoindent
 set smartindent
 set smarttab
-set tabstop=4
+set tabstop=2
+"use :set expandtab to switch back to soft tabs
 set expandtab
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set sidescroll=7
 set scrolloff=3
-set textwidth=79
+"set textwidth=79
 set nowrap
 set nospell
 
@@ -56,7 +59,7 @@ set nospell
 let javascript_enable_domhtmlcss=1
 
 "CONCERNING JS AND CTAGS-----------------
-nmap <leader>tt :TagbarToggle<CR>
+nmap <leader>tb :TagbarToggle<CR>
 
 "CLEAR HIGHLIGHTS----------------
 nmap <leader>ch :nohls<CR>
@@ -67,6 +70,7 @@ nmap <leader>ch :nohls<CR>
 "NERD TREE----------------------------------------
 nmap <leader>nt :NERDTreeToggle<CR>
 nmap <leader>ntm :NERDTreeMirror<CR>
+nmap <leader>ntf :NERDTreeFind<CR>
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 
 "NERD COMMENTS--------------------------
@@ -145,3 +149,4 @@ if has("gui_macvim")
     vmap <D-]> >gv
     vmap <D-[> <gv
 endif
+
